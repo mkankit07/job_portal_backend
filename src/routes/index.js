@@ -11,6 +11,6 @@ const mainRoutes=express.Router()
 mainRoutes.use("/user",userRoutes)
 mainRoutes.use("/job",authenticate,jobRoutes)
 mainRoutes.use("/bookmark",authenticate,bookMarkRoutes)
-mainRoutes.use("/media",authenticate,mediaRoutes)
+mainRoutes.use("/media",mediaRoutes)
 mainRoutes.use("/apply-job",authenticate,applyJobRoutes)
 module.exports=mainRoutes

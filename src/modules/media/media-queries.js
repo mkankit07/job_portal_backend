@@ -5,7 +5,7 @@ const createMedia=async(payload)=>{
 }
 
 const getMediaById=async(id)=>{
-    return await mediaModel.getById(id)
+    return await mediaModel.findById(id)
 }
 
 module.exports={
