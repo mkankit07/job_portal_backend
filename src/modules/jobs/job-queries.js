@@ -16,7 +16,7 @@ const getJobByUserId=async(userId)=>{
 }
 
 const getAllJob=async()=>{
-    return await jobModel.find().populate("user_id", '_id name email')
+    return await jobModel.find().sort({"createdAt":-1}).populate("user_id", '_id name email')
 }
 
 module.exports={

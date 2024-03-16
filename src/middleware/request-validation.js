@@ -5,7 +5,7 @@ const validateRequest = (() => {
       res.status(400).json({
         code:400,
         status: false,
-        messsage: parsedBody.error.message ||"Bid failed",
+        message: parsedBody.error.message ||"Bid failed",
       });
       return;
     }

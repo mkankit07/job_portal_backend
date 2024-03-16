@@ -11,7 +11,7 @@ const getBookMarkByUserId=async(req,res)=>{
 }
 
 const deleteById=async(req,res)=>{
-    const response=await bookMarkService.deleteById(req.params.id)
+    const response=await bookMarkService.deleteById(req.params?.id)
     res.status(response.code).json(response)
 }
 

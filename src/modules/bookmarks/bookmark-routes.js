@@ -8,6 +8,6 @@ const bookMarkRoutes=express.Router()
 
 bookMarkRoutes.post("/", validateRequest.body(bookMarkValidationSchema.jobId),asyncHandler(bookMarkHandler.create))
 bookMarkRoutes.get("/",asyncHandler(bookMarkHandler.getBookMarkByUserId)) 
-bookMarkRoutes.delete(":/id", asyncHandler(bookMarkHandler.deleteById))
+bookMarkRoutes.delete("/:id", asyncHandler(bookMarkHandler.deleteById))
 
 module.exports = bookMarkRoutes

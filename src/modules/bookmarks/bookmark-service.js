@@ -8,12 +8,12 @@ const create=async(data,user_id)=>{
         return response(400,"Invalid job Id!")
     }
     await bookMarkQuery.bookMarkJob({user_id,job_id:data.job_id})
-   return response(201,"job bookmarked successfully")
+   return response(201,"Job book marked successfully")
 }
 
 const getByUserId=async(user_id)=>{
     const bookmarked= await bookMarkQuery.getBookMarkByUserId(user_id)
-    return response(200,"job bookmarked successfully",bookmarked)
+    return response(200,"Job book marked successfully",bookmarked)
 }
 
 const deleteById=async(id)=>{

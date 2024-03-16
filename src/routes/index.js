@@ -9,7 +9,7 @@ const applyJobRoutes=require("../modules/applies-job/apply-job-routes")
 const mainRoutes=express.Router()
 
 mainRoutes.use("/user",userRoutes)
-mainRoutes.use("/job",authenticate,jobRoutes)
+mainRoutes.use("/job",jobRoutes)
 mainRoutes.use("/bookmark",authenticate,bookMarkRoutes)
 mainRoutes.use("/media",mediaRoutes)
 mainRoutes.use("/apply-job",authenticate,applyJobRoutes)
